@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  background: #f4f4f4;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn--orange {
+  background: #c83c12;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.m-heading {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+.oH {
+  color: #af2e07;
+}
+
+/*index.html*/
+.header {
+  background: #282727;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav h1 {
+  color: #c83c12;
+  font-size: 4rem;
+}
+
+.header .nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.header .nav__list a {
+  display: block;
+  text-decoration: none;
+  padding: 2rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.header .nav__list a:hover {
+  color: #af2e07;
+}
+
+.header__section {
+  height: 80vh;
+  background: url("/img/background.jpg") no-repeat center center/cover;
+}
+
+.main .about {
+  background: #fff;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.main .about__content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.main .about__content-info, .main .about__content-img {
+  width: 50%;
+}
+
+.main .about__content .read {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.main .about__content .read a {
+  padding: 0.5rem;
+  color: #fff;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s;
+}
+
+.main .about__content .read a:hover {
+  background: #af2e07;
+}
+
+.main .about__content-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main .services__content h2 {
+  text-align: center;
+}
+
+.main .services__content-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.main .services__content-items .item {
+  width: 40rem;
+}
+
+.main .services__content-items .item i {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 50%;
+  font-size: 4rem;
+}
+
+.main .services__content-items .item h3 {
+  color: #c83c12;
+}
+
+.footer {
+  background: #282727;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.sign {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgba(175, 46, 7, 0.2), rgba(200, 60, 18, 0.2)), url("/img/background.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.sign__form {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  width: 50rem;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 2.5rem;
+  height: 30rem;
+  box-shadow: 5px 5px 20px 2px #000000;
+}
+
+.sign__form--content {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.sign__form--content label {
+  display: block;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.sign__form--content input {
+  width: 100%;
+  height: 3.5rem;
+  padding: 1.5rem;
+  transition: all 0.5s;
+  border: none;
+}
+
+.sign__form--content input:focus {
+  outline: none;
+  border: 1px solid #c83c12;
+}
+
+.sign__form--content .form__signin {
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.sign__form--content .form__signin a {
+  height: 100%;
+  padding: 0.5rem;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.sign__form--content .form__signin a:hover {
+  background: #af2e07;
+}
+
+.register {
+  background: url("/img/background2.jpg");
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.register__form {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  width: 50rem;
+  min-height: 30rem;
+  margin: 0 auto;
+  padding: 2.5rem;
+  position: relative;
+  top: 18rem;
+  box-shadow: 5px 5px 20px 2px #000000;
+}
+
+.register__form--content {
+  margin-top: 3rem;
+}
+
+.register__form--content .name,
+.register__form--content .info,
+.register__form--content .pass,
+.register__form--content .contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register__form--content .profile {
+  background: green;
+  position: absolute;
+  width: 10.5rem;
+  height: 10.5rem;
+  border-radius: 50%;
+  top: -5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.register__form--content .profile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.register__form--content .half {
+  width: 50%;
+}
+
+.register__form--content .half:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.register__form--content label {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.register__form--content input,
+.register__form--content select {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  border: none;
+  transition: all 0.5s;
+}
+
+.register__form--content input:focus,
+.register__form--content select:focus {
+  outline: none;
+  border: 1px solid #c83c12;
+}
+
+.register__form--content .form__register {
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.register__form--content .form__register a {
+  height: 100%;
+  padding: 0.5rem;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.register__form--content .form__register a:hover {
+  background: #af2e07;
+}
