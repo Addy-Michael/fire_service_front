@@ -18,6 +18,29 @@ $form-shadow: 5px 5px 20px 2px #000000;
   transition: all 0.2s;
 }
 
+@mixin headerStyle {
+  background: $color-black;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+@mixin headerNavStyle {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin headerH1Style {
+  color: $color-orange;
+      font-size: 4rem;
+}
+
+@mixin headerNavList {
+  list-style: none;
+  display: flex;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +61,10 @@ body {
 .btn {
   display: inline-block;
   text-decoration: none;
+
+  &--outline-orange{
+    border: 1px solid $color-orange;
+  }
 
   &--orange {
     background: $color-orange;

@@ -21,6 +21,10 @@ body {
   text-decoration: none;
 }
 
+.btn--outline-orange {
+  border: 1px solid #c83c12;
+}
+
 .btn--orange {
   background: #c83c12;
 }
@@ -154,6 +158,158 @@ body {
   padding: 1rem;
   color: #fff;
   text-align: center;
+}
+
+.profile__header {
+  background: #282727;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.profile__header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile__header .nav h1 {
+  color: #c83c12;
+  font-size: 4rem;
+}
+
+.profile__header .nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.profile__header .nav__list li:first-child {
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile__header .nav__list .profilePicture {
+  margin-right: 1rem;
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.profile__header .nav__list .profilePicture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile__header .nav__list a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 0;
+  transition: all 0.2s;
+}
+
+.profile__header .nav__list a:hover {
+  color: #af2e07;
+}
+
+.profile__header .nav__list a .signOut {
+  font-size: 2.5rem;
+}
+
+.user__form {
+  width: 60rem;
+  margin: 4rem auto;
+}
+
+.user__form label {
+  display: block;
+  text-transform: capitalize;
+}
+
+.user__form-picture {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.user__form-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user__form .image {
+  display: none;
+}
+
+.user__form .img__open {
+  position: absolute;
+  top: 25.5rem;
+  left: 76.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #c83c12;
+}
+
+.user__form-name, .user__form-contact, .user__form-info, .user__form-pass {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.user__form-name .half, .user__form-contact .half, .user__form-info .half, .user__form-pass .half {
+  width: 50%;
+}
+
+.user__form-name .half:not(:last-child), .user__form-contact .half:not(:last-child), .user__form-info .half:not(:last-child), .user__form-pass .half:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.user__form input, .user__form select {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  border: none;
+}
+
+.user__form input:focus, .user__form select:focus {
+  outline: none;
+  border: 1px solid #c83c12;
+}
+
+.user__form-edit {
+  text-align: right;
+}
+
+.user__form-edit a {
+  padding: .5rem;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.user__form-edit a:first-child {
+  color: #c83c12;
+}
+
+.user__form-edit a:first-child:hover {
+  background: #af2e07;
+  color: #fff;
+}
+
+.user__form-edit a:hover {
+  background: #af2e07;
 }
 
 .sign {

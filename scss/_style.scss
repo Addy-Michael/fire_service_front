@@ -1,24 +1,17 @@
 /*index.html*/
 // Navigation
 .header {
-  background: $color-black;
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  @include headerStyle;
 
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include headerNavStyle;
 
     h1 {
-      color: $color-orange;
-      font-size: 4rem;
+      @include headerH1Style;
     }
 
     &__list {
-      list-style: none;
-      display: flex;
+      @include headerNavList;
 
       a {
         display: block;
@@ -122,6 +115,152 @@
   padding: 1rem;
   color: #fff;
   text-align: center;
+}
+
+// userprofile.html
+.profile__header{
+  @include headerStyle;
+
+  .nav{
+    @include headerNavStyle;
+
+    h1{@include headerH1Style;}
+
+    &__list{
+      @include headerNavList;
+      align-items: center;
+
+      li:first-child{
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      
+      .profilePicture{
+        margin-right: 1rem;
+        display: block;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background: #fff;
+        overflow: hidden;
+
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      a{
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem 0;
+        @include transition2s;
+
+        &:hover{
+          color: $color-orange-dark;
+        }
+
+        .signOut{
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.user{
+  &__form{
+    width: 60rem;
+    margin: 4rem auto;
+
+    label{
+      display: block;
+      text-transform: capitalize;
+    }
+
+    &-picture{
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      background: #fff;
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .image{
+      display: none;
+    }
+
+    .img__open{
+      position: absolute;
+      top: 25.5rem;
+      left: 76.5rem;
+      font-size: 3rem;
+      cursor: pointer;
+      color: $color-orange;
+    }
+
+    &-name,&-contact,&-info,&-pass{
+      display: flex;
+      width: 100%;
+      margin-bottom: 2.5rem;
+
+      .half{
+        width: 50%;
+
+        &:not(:last-child){
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    input,select{
+      width: 100%;
+      height: 3.5rem;
+      padding: 0 1.5rem;
+      border: none;
+
+      &:focus{
+        outline: none;
+        border: 1px solid $color-orange;
+      }
+    }
+
+    &-edit{
+      text-align: right;
+      
+      a{
+        padding: .5rem;
+        color: #fff;
+        @include transition2s;
+
+        &:first-child{
+          color: $color-orange;
+
+          &:hover{
+            background: $color-orange-dark;
+            color: #fff;
+          }
+        }
+
+        &:hover{
+          background: $color-orange-dark;
+        }
+      }
+    }
+  }
 }
 
 // signin.html
