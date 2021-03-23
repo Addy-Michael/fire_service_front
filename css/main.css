@@ -277,14 +277,16 @@ body {
   margin-right: 2rem;
 }
 
-.user__form input, .user__form select {
+.user__form input,
+.user__form select {
   width: 100%;
   height: 3.5rem;
   padding: 0 1.5rem;
   border: none;
 }
 
-.user__form input:focus, .user__form select:focus {
+.user__form input:focus,
+.user__form select:focus {
   outline: none;
   border: 1px solid #c83c12;
 }
@@ -294,7 +296,7 @@ body {
 }
 
 .user__form-edit a {
-  padding: .5rem;
+  padding: 0.5rem;
   color: #fff;
   transition: all 0.2s;
 }
@@ -310,6 +312,158 @@ body {
 
 .user__form-edit a:hover {
   background: #af2e07;
+}
+
+.mainDashboard .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+}
+
+.mainDashboard__aside {
+  background: #fff;
+  width: 30%;
+}
+
+.mainDashboard__admin-details {
+  text-align: center;
+}
+
+.mainDashboard__admin-details .admin__img {
+  height: 10rem;
+  width: 10rem;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mainDashboard__admin-details .admin__img img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainDashboard__admin {
+  width: 70%;
+}
+
+.mainDashboard__admin .monitoring {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.mainDashboard__admin .monitoring .staffDetails,
+.mainDashboard__admin .monitoring .recordDetails {
+  background: #fff;
+  width: calc(100% - 4rem);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.mainDashboard__admin .monitoring .staffDetails {
+  margin-right: 4rem;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user div {
+  margin-right: 0.5rem;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user-img {
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user-del {
+  color: #c83c12;
+  transition: all 0.2s;
+  font-size: 1.5rem;
+}
+
+.mainDashboard__admin .monitoring .staffDetails__user-del:hover {
+  color: #af2e07;
+}
+
+.mainDashboard__admin .monitoring .recordDetails {
+  align-self: flex-start;
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec {
+  height: 6.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec div:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec-delete a {
+  color: #c83c12;
+  transition: all 0.2s;
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec-delete a:first-child {
+  margin-right: 0.5rem;
+}
+
+.mainDashboard__admin .monitoring .recordDetails__rec-delete a:hover {
+  color: #af2e07;
+}
+
+.mainDashboard__admin-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7rem;
+  font-weight: 100;
+}
+
+.mainDashboard__admin-info div {
+  background: #fff;
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.mainDashboard__admin-info div h3 {
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .sign {

@@ -118,53 +118,42 @@
 }
 
 // userprofile.html
-.profile__header{
+.profile__header {
   @include headerStyle;
 
-  .nav{
+  .nav {
     @include headerNavStyle;
 
-    h1{@include headerH1Style;}
+    h1 {
+      @include headerH1Style;
+    }
 
-    &__list{
+    &__list {
       @include headerNavList;
       align-items: center;
 
-      li:first-child{
+      li:first-child {
         margin-right: 1rem;
         display: flex;
         align-items: center;
       }
-      
-      .profilePicture{
-        margin-right: 1rem;
-        display: block;
-        height: 5rem;
-        width: 5rem;
-        border-radius: 50%;
-        background: #fff;
-        overflow: hidden;
 
-        img{
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      .profilePicture {
+        @include headerProfilePic;
       }
 
-      a{
+      a {
         display: inline-block;
         text-decoration: none;
         color: #fff;
         padding: 1rem 0;
         @include transition2s;
 
-        &:hover{
+        &:hover {
           color: $color-orange-dark;
         }
 
-        .signOut{
+        .signOut {
           font-size: 2.5rem;
         }
       }
@@ -172,17 +161,17 @@
   }
 }
 
-.user{
-  &__form{
+.user {
+  &__form {
     width: 60rem;
     margin: 4rem auto;
 
-    label{
+    label {
       display: block;
       text-transform: capitalize;
     }
 
-    &-picture{
+    &-picture {
       width: 20rem;
       height: 20rem;
       border-radius: 50%;
@@ -191,7 +180,7 @@
       margin-bottom: 2.5rem;
       overflow: hidden;
 
-      img{
+      img {
         display: block;
         width: 100%;
         height: 100%;
@@ -199,11 +188,11 @@
       }
     }
 
-    .image{
+    .image {
       display: none;
     }
 
-    .img__open{
+    .img__open {
       position: absolute;
       top: 25.5rem;
       left: 76.5rem;
@@ -212,52 +201,216 @@
       color: $color-orange;
     }
 
-    &-name,&-contact,&-info,&-pass{
+    &-name,
+    &-contact,
+    &-info,
+    &-pass {
       display: flex;
       width: 100%;
       margin-bottom: 2.5rem;
 
-      .half{
+      .half {
         width: 50%;
 
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-right: 2rem;
         }
       }
     }
 
-    input,select{
+    input,
+    select {
       width: 100%;
       height: 3.5rem;
       padding: 0 1.5rem;
       border: none;
 
-      &:focus{
+      &:focus {
         outline: none;
         border: 1px solid $color-orange;
       }
     }
 
-    &-edit{
+    &-edit {
       text-align: right;
-      
-      a{
-        padding: .5rem;
+
+      a {
+        padding: 0.5rem;
         color: #fff;
         @include transition2s;
 
-        &:first-child{
+        &:first-child {
           color: $color-orange;
 
-          &:hover{
+          &:hover {
             background: $color-orange-dark;
             color: #fff;
           }
         }
 
-        &:hover{
+        &:hover {
           background: $color-orange-dark;
         }
+      }
+    }
+  }
+}
+
+// dashboard.html
+.mainDashboard {
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+  }
+
+  &__aside {
+    background: #fff;
+    width: 30%;
+  }
+
+  &__admin-details {
+    text-align: center;
+
+    .admin__img {
+      height: 10rem;
+      width: 10rem;
+      background: #fff;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__admin {
+    width: 70%;
+
+    .monitoring {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+
+      .staffDetails,
+      .recordDetails {
+        background: #fff;
+        width: calc(100% - 4rem);
+        @include dashBoxShadow;
+      }
+
+      .staffDetails {
+        margin-right: 4rem;
+
+        &__user {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          // background: red;
+          
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(black, 0.1);
+          }
+
+          div {
+            margin-right: 0.5rem;
+          }
+
+          &-img {
+            height: 6.5rem;
+            width: 6.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            // background: green;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          &-del {
+            color: $color-orange;
+            @include transition2s;
+            font-size: 1.5rem;
+
+            &:hover {
+              color: $color-orange-dark;
+            }
+          }
+        }
+      }
+
+      .recordDetails {
+        align-self: flex-start;
+
+        &__rec{
+          height: 6.5rem; 
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          // background: red;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(black, 0.1);
+          }
+
+          div {
+            &:not(:last-child){
+              margin-right: 0.5rem;
+            }
+          }
+
+          &-delete a{
+            color: $color-orange;
+            @include transition2s;
+
+            &:first-child{
+              margin-right: 0.5rem;
+            }
+
+            &:hover{
+              color: $color-orange-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__admin-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7rem;
+    font-weight: 100;
+
+    div {
+      background: #fff;
+      height: 20rem;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include dashBoxShadow;
+
+      h3 {
+        font-weight: 400;
+        font-size: 2rem;
       }
     }
   }
