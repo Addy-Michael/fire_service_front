@@ -6,6 +6,7 @@ $color-primary: #fff;
 $color-orange: #c83c12;
 $color-orange-dark: #af2e07;
 $color-black: #282727;
+$color-gray: #899b8d;
 
 $form-width: 50rem;
 $form-shadow: 5px 5px 20px 2px #000000;
@@ -106,4 +107,10 @@ body {
 
 .oH {
   color: $color-orange-dark;
+}
+
+.h-gray{
+  color: $color-gray;
+  font-weight: 400;
+  font-size: 1.5rem;
 }

@@ -45,6 +45,12 @@ body {
   color: #af2e07;
 }
 
+.h-gray {
+  color: #899b8d;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 /*index.html*/
 .header {
   background: #282727;
@@ -390,12 +396,6 @@ body {
   margin-top: 1rem;
 }
 
-.mainDashboard__admin-navigation h3 {
-  color: #899b8d;
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
 .mainDashboard__admin-navigation .keys {
   margin-top: 1rem;
 }
@@ -429,6 +429,35 @@ body {
 .mainDashboard__admin-navigation .keys .dashboard:hover {
   color: #fff;
   background: #af2e07;
+}
+
+.mainDashboard__admin-tasks {
+  margin-top: 1rem;
+}
+
+.mainDashboard__admin-tasks .keys {
+  margin-top: 1rem;
+}
+
+.mainDashboard__admin-tasks .keys a {
+  display: block;
+  margin-left: 2.5rem;
+  color: #fff;
+  padding: 1rem;
+  background: #c83c12;
+  transition: all 0.2s;
+}
+
+.mainDashboard__admin-tasks .keys a:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.mainDashboard__admin-tasks .keys a:hover {
+  background: #af2e07;
+}
+
+.mainDashboard__admin-tasks .keys a i {
+  margin-right: 0.5rem;
 }
 
 .mainDashboard__admin {
@@ -604,7 +633,7 @@ body {
 .records .content .rec input,
 .records .content .rec select {
   height: 3.5rem;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.5);
   transition: all 0.2s;
 }
@@ -858,4 +887,152 @@ body {
 
 .register__form--content .form__register a:hover {
   background: #af2e07;
+}
+
+.admin__reports-view, .admin__reports-title {
+  display: grid;
+  grid-template-columns: repeat(6, calc(110rem/6));
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.admin__reports-view:nth-child(even), .admin__reports-title:nth-child(even) {
+  background: #fff;
+}
+
+.admin__reports-view--COD, .admin__reports-view--location, .admin__reports-title--COD, .admin__reports-title--location {
+  text-transform: capitalize;
+}
+
+.admin__reports-view--operations, .admin__reports-title--operations {
+  color: #c83c12;
+}
+
+.admin__reports-view--operations i, .admin__reports-title--operations i {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin__reports-view--operations i:hover, .admin__reports-title--operations i:hover {
+  color: #af2e07;
+}
+
+.admin__reports-view--operations i:not(:last-child), .admin__reports-title--operations i:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.admin__reports-view:last-child {
+  margin-bottom: 2rem;
+}
+
+.admin__reports-title {
+  background: #c83c12;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.admin__reports-title h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.admin__reports .search {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #c83c12;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 1rem;
+  bottom: 3.5rem;
+}
+
+.admin__staffs-view, .admin__staffs-title {
+  display: grid;
+  grid-template-columns: repeat(9, calc(100%/9));
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.admin__staffs-view:nth-child(even), .admin__staffs-title:nth-child(even) {
+  background: #fff;
+}
+
+.admin__staffs-view--COD, .admin__staffs-view--location, .admin__staffs-title--COD, .admin__staffs-title--location {
+  text-transform: capitalize;
+}
+
+.admin__staffs-view--operations, .admin__staffs-title--operations {
+  color: #c83c12;
+}
+
+.admin__staffs-view--operations i, .admin__staffs-title--operations i {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin__staffs-view--operations i:hover, .admin__staffs-title--operations i:hover {
+  color: #af2e07;
+}
+
+.admin__staffs-view--operations i:not(:last-child), .admin__staffs-title--operations i:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.admin__staffs-view {
+  font-size: 1.2rem;
+}
+
+.admin__staffs-view--img {
+  height: 5rem;
+  width: 5rem;
+  background: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.admin__staffs-view--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin__staffs-view:last-child {
+  margin-bottom: 2rem;
+}
+
+.admin__staffs-title {
+  background: #c83c12;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.admin__staffs-title h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.admin__staffs .search {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #c83c12;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 1rem;
+  bottom: 3.5rem;
 }
