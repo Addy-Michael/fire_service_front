@@ -57,6 +57,13 @@
                             <label for="dob">Date of Birth:</label>
                             <input type="date" name="date_of_birth" id="dob">
                         </div>
+                        <div class="role half">
+                            <label for="user-role">Role</label>
+                            <select name="gender" id="user-role">
+                                <option value="admin">Admin</option>
+                                <option value="staff">Staff</option>
+                            </select>
+                        </div>
                         <div class="gender half">
                             <label for="gen">Gender</label>
                             <select name="gender" id="gen">
@@ -76,7 +83,8 @@
                         </div>
                     </div>
                     <div class="user__form-edit">
-                        <a href="#" class="btn btn--outline-orange">Update Profile</a>
+                        <a href="/changepassword.html" class="btn btn--orange">Change Pasword</a>
+                        <a href="#" class="btn btn--outline-orange updateProfile">Update Profile</a>
                         <a href="#" class="btn btn--orange">Delete Profile</a>
                     </div>
                 </div>

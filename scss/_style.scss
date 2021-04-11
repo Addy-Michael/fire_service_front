@@ -239,17 +239,16 @@
         color: #fff;
         @include transition2s;
 
-        &:first-child {
-          color: $color-orange;
-
-          &:hover {
-            background: $color-orange-dark;
-            color: #fff;
-          }
-        }
-
-        &:hover {
+        &:hover{
           background: $color-orange-dark;
+        }
+      }
+
+      .updateProfile{
+        color: $color-orange;
+
+        &:hover{ 
+          color: $color-primary;
         }
       }
     }

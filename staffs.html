@@ -9,9 +9,27 @@
     <title>All staff|FireFighters</title>
 </head>
 <body>
-    <section class="admin__staffs">
+    <section class="admin__staffs" id="top">
+        <div class="query">
+            <div class="container">
+                <input type="text" class="reportID" placeholder="Enter report number">
+                <input list="months" class="reportMonth" id="month" placeholder="month">
+                <datalist id="months">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                </datalist>
+                <select class="reportYear">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                <button type="submit" class="searchRecords btn--outline-orange">Search Records</button>
+            </div>
+        </div>
         <div class="content">
-            <div class="admin__staffs-title">
+            <div class="admin__staffs-title stickyTitle">
                 <h3>Staff Image</h3>
                 <h3>Staff ID</h3>
                 <h3>First name</h3>
@@ -238,7 +256,7 @@
                     <i class="fas fa-trash-alt"></i>
                 </div>
             </div>
-            <a href="#" class="btn search">
+            <a href="#top" class="btn search">
                 <i class="fas fa-search"></i>
             </a>
         </div>

@@ -114,3 +114,37 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
 }
+
+.query{
+  height: 14vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  input,
+  select,
+  button{
+    height: 3.5rem;
+    padding: 0 1rem;
+    border: none;
+    border: 1px solid $color-orange;
+  }
+
+  button{
+    cursor: pointer;
+    background: transparent;
+    @include transition2s;
+
+    &:hover{
+      background: $color-orange;
+      border: none;
+      color: $color-primary;
+    }
+  }
+}
+
+.stickyTitle{
+  position: sticky;
+  top: 0;
+}
